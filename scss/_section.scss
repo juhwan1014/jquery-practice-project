@@ -1,0 +1,35 @@
+// Info Section styles
+.info {
+    padding-top: 100px;
+
+    h1 {
+        padding: $padding;
+        font-size: 2em;
+        padding-left: 3%;
+
+      
+    }
+
+   
+
+    @include first-last-el-no-margin;
+
+    .some-row {
+        @include flex-column;
+
+        .a-01,
+        .a-02 {
+            @extend %row-item;
+        }
+
+    }
+
+    @media screen and (min-width: $phoneLandscape) {
+        .some-row {
+            @include flex-row;
+        }
+    }
+
+ 
+
+}

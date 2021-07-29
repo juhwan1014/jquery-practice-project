@@ -1,0 +1,43 @@
+header{
+    height: 420px;
+    /*margin-top: 40px;*/
+    
+    /*display: flex;*/
+   /*align-items: center;
+   
+    justify-content: right;
+   */
+}
+
+.p{
+    
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+}
+.korea{
+    display: flex;
+    align-items: center;
+   
+   
+}
+
+
+@media screen and (max-width: $phoneLandscape) {
+    header{
+        height:200px;
+    }
+    .map {
+        display: none;
+    }
+    .korea{
+        display: flex;
+        font-size: 0.4em;
+        color: white;
+        align-items: center;
+        margin-left: -50px;
+        padding-top: 40px;
+    }
+   
+}

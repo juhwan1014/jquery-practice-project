@@ -1,0 +1,49 @@
+nav {
+    
+    //locally scoped variables
+    $height: 50px;
+    $border: 1px solid black;
+    background-color: $brand-color;
+    box-shadow: $box-shadow;
+    opacity: 0.8;
+
+
+    ul {
+        @include flatten;
+        @include flex-column;
+    }
+
+    .item {
+        border-top: $border;
+        display: none;
+    }
+
+    .menu .item a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: $line-height;
+        padding: $padding / 2;
+        color: white;
+        transition: all .5s ease-in;
+
+        &:hover {
+            background-color: rgba(226, 226, 226, 0.5);
+            border-radius: 150px;
+        }
+    }
+
+    /*
+    @media screen and (min-width: $phoneLandscape) {
+        ul {
+            @include flex-row;
+
+            .item {
+                display: block;
+                border: none;
+                padding: 0 5%;
+            }
+        }
+    }*/
+}

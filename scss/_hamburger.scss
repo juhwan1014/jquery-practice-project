@@ -1,0 +1,19 @@
+.toggle {
+    font-size: 1.5em;
+    padding: 2%;
+
+    .fas {
+        color: white;
+    }
+}
+
+.active .item {
+    display: block;
+}
+/*
+@media screen and (min-width: $phoneLandscape) {
+    .toggle {
+        display: none;
+    }
+}
+*/

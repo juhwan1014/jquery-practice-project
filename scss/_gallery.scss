@@ -1,0 +1,70 @@
+.image-gallery {
+      padding-top: 80px;
+    @include flex-column;
+
+
+    .image-container {
+        display: block;
+        margin-bottom: 20px;
+        padding: 5%;
+        @include square-img;
+
+
+        img {
+            @include img-cover;
+        }
+
+        .profile {
+           @include el-cover;
+            @include flex-center;
+            background-color: rgba($body-bg-color, 0.8);
+            transform: scale(0);
+
+            transition: 0.3s ease;
+
+            .name {
+                @include flatten;
+                font-size: 1.5em;
+                color: $brand-color;
+                font-weight: bold;
+
+            }
+
+            
+            //Nesting is probably most often used to create more specific selectors, but it can also be used simply for code organization. Using the @at-root directive, you can ‘jump out’ of where you nest it in your Sass, bringing you back at the top level. Doing this allows you to keep styles grouped without creating more specificity than you need.
+            @at-root .image-container:hover .profile,
+            .image-container:focus .profile {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: $phoneLandscape) {
+    .image-gallery {
+        @include flex-row;
+    }
+
+    .image-container {
+        @include video-img;
+    }
+
+}
+
+.card2{
+    float: left;
+    margin: auto;
+    
+}
+.card-text{
+    margin-left: -34px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
